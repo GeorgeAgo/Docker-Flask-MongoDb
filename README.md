@@ -13,6 +13,8 @@ sudo apt install docker docker-compose
 ```bash
 docker-compose up -d  
 ```
+![](E19002/screenshots/arxiko.png )
+
 Παρακάτω θα αναλυθούν οι λειτουργίες του προγράμματος καθώς και τα βήματα υλοποίησης του από τον χρήστη . <br />
 
 Πρώτα από όλα υπογραμμίζουμε ότι κατά την εκχώρηση των στοιχείων από τον χρήστη στο πεδίο του url , το κάθε πεδίο χωρίζεται από το επόμενο με & και εχωρεί την τιμή αμέσως μετά το = .  <br />
@@ -22,6 +24,7 @@ docker-compose up -d
 Σε κάθε παράλειψη συμπλήρωσης πεδίου , το πεδίο συμπληρώνεται με το None . <br />
 
 ## -> Λειτουργία Sign up 
+![](E19002/screenshots/signup.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/signup/?mail=a&username=a&name=a&password=a&role=0
@@ -31,6 +34,7 @@ To πρόγραμμα ελέγχει αν το json αρχείο είναι στ
 Αν το username ή οποιοδήποτε άλλο πεδίο χρησιμοποιείται ήδη από άλλο χρήστη , τότε δεν γίνεται sign up και αναγράφεται το αντίστοιχο σφάλμα.
 
 ## -> Λειτουργία login
+![](E19002/screenshots/login.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/login/?mail=a&username=a&name=a&password=a
@@ -39,6 +43,7 @@ http://localhost:5000/login/?mail=a&username=a&name=a&password=a
 Αν κάποιο από τα στοιχεία που εισάχθηκαν δεν υπάρχει στα δεδομένα μας , τότε το Login δεν πραγματοποιείται . <br />
 
 ## -> Λειτουργία createNote
+![](E19002/screenshots/createnote.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/CreateNote/?title=note1&text=text_tou_note1&tags=tag_tou_note1
@@ -48,6 +53,7 @@ http://localhost:5000/CreateNote/?title=note1&text=text_tou_note1&tags=tag_tou_n
 Όμως αν έχει δημιουργηθεί ήδη τότε η λειτουργία ματαιώνεται ενημερώνοντας το χρήστη για το πρόβλημα . </br>
 
 ## -> Λειτουργία titleSearch
+![](E19002/screenshots/titlesearch.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/title_Search/?title=note1
@@ -56,6 +62,7 @@ http://localhost:5000/title_Search/?title=note1
 Αν δεν υπάρχει κάποιο note με το αντίστοιχο όνομα επιστρέφεται στο χρήστη το αντίστοιχο σφάλμα . </br>
 
 ## -> Λειτουργία tag_Search
+![](E19002/screenshots/tagsearch.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/tag_Search/?tags=tag_tou_note1
@@ -64,6 +71,7 @@ http://localhost:5000/tag_Search/?tags=tag_tou_note1
 Αν δεν υπάρχει κάποιο note με το αντίστοιχο tag επιστρέφεται στο χρήστη το αντίστοιχο σφάλμα . </br>
 
 ## -> Λειτουργία update
+![](E19002/screenshots/update.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/update/?title=note1
@@ -72,6 +80,7 @@ http://localhost:5000/update/?title=note1
 Από την άλλη αν δεν βρεθεί ο τίτλος της σημείωσης επιστρέφεται στο χρήστη το αντίστοιχο σφάλμα . </br>
 
 ## -> Λειτουργία deleteNote
+![](E19002/screenshots/deletenote.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/deleteNote/?title=note1
@@ -80,6 +89,7 @@ http://localhost:5000/deleteNote/?title=note1
 Από την άλλη αν δεν βρεθεί ο τίτλος της σημείωσης επιστρέφεται στο χρήστη το αντίστοιχο σφάλμα . </br>
 
 ## -> Λειτουργία sort
+![](E19002/screenshots/sort.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/sort/?sort=+
@@ -87,6 +97,7 @@ http://localhost:5000/sort/?sort=+
 Ο χρήστης το μόνο που έχει να εισάγει είναι ο χρόνος που θα γίνει η χρονολογική σειρά , δηλαδή με + αν θέλει να γίνει ascending ή - για descending , με άλλα λόγια αν θέλει να εμφανιστούν πρώτα οι παλαιότερες ή πρώτα οι νεότερες σημειώσεις . </br>
 
 ## -> Λειτουργία delete
+![](E19002/screenshots/deleteuser.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/delete/?
@@ -96,6 +107,7 @@ http://localhost:5000/delete/?
 ## Σε αυτό το σημείο περνάμε στις λειτουργίες που μπορεί να εκτελέσει μόνο ένας διαχειριστής , δηλαδή έχει πραγματοποιήσει sing up με role=1 . </br>
 
 ## -> Λειτουργία Insert_Admin
+![](E19002/screenshots/inserAdmin.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/Insert_Admin/?mail=b&username=b&name=b&password=b&role=1
@@ -104,6 +116,7 @@ http://localhost:5000/Insert_Admin/?mail=b&username=b&name=b&password=b&role=1
 Το μόνο πρόβλημα που μπορεί να προκύψει είναι να υπάρχει ήδη αυτός ο διαειρστής εγγεγραμένος στο πρόγραμμα , σε αυτή τη περίπτωση ενημερώνεται ο χρήστης για το σφάλμα και η εγγραφή του admin ματαιώνεται . </br>
 
 ## -> Λειτουργία delete_Admin
+![](E19002/screenshots/deleteadmin.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/delete_Admin/?username=a
