@@ -1,1 +1,1 @@
-# -YpoxreotikiErgasia22_E19002_Agoritsas_Giorgos
+# YpoxreotikiErgasia22_E19002_Agoritsas_Giorgos
