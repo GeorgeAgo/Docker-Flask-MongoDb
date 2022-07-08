@@ -107,7 +107,7 @@ http://localhost:5000/delete/?
 ## Σε αυτό το σημείο περνάμε στις λειτουργίες που μπορεί να εκτελέσει μόνο ένας διαχειριστής , δηλαδή έχει πραγματοποιήσει sing up με role=1 . </br>
 
 ## -> Λειτουργία Insert_Admin
-![](E19002/screenshots/inserAdmin.png )
+![](E19002/screenshots/insertAdmin.png )
 Δίνοντας :
 ```bash
 http://localhost:5000/Insert_Admin/?mail=b&username=b&name=b&password=b&role=1
